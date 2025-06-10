@@ -21,4 +21,4 @@ No colors, no distractions—just clean typography.
 }
 
 ### TO-DO
-- other color varitiones from original graphite GTK theme []
+- **other color varitiones from original graphite GTK theme** []
