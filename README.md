@@ -19,6 +19,7 @@ No colors, no distractions—just clean typography.
     vim.cmd.colorscheme("graphite")
   end,
 }
+```
 
 ### TO-DO
 - **other color varitiones from original graphite GTK theme** []
