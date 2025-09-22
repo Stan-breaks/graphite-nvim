@@ -66,12 +66,12 @@ execute "highlight Repeat       guifg=" . s:fg . " gui=bold"
 execute "highlight Statement    guifg=" . s:fg . " gui=bold"
 execute "highlight Exception    guifg=" . s:fg . " gui=bold"
 
-" Functions and Identifiers
+" Functions and Identifiers - Bright but not bold
 execute "highlight Function     guifg=" . s:fg_bright . " gui=NONE"
 execute "highlight Identifier   guifg=" . s:fg_dim . " gui=NONE"
 execute "highlight Variable     guifg=" . s:fg_dim . " gui=NONE"
 
-" Types and Constants
+" Types and Constants - Slightly dimmed
 execute "highlight Type         guifg=" . s:fg . " gui=NONE"
 execute "highlight Typedef      guifg=" . s:fg . " gui=NONE"
 execute "highlight Constant     guifg=" . s:fg_dim . " gui=NONE"
@@ -121,7 +121,7 @@ execute "highlight Question     guifg=" . s:fg . " gui=bold"
 execute "highlight ModeMsg      guifg=" . s:fg . " gui=bold"
 execute "highlight MoreMsg      guifg=" . s:fg . " gui=bold"
 
-" LSP Diagnostics
+" LSP Diagnostics - Using underlines and different intensities
 execute "highlight DiagnosticError guifg=" . s:fg_bright . " gui=undercurl"
 execute "highlight DiagnosticWarn  guifg=" . s:fg . " gui=undercurl"
 execute "highlight DiagnosticInfo  guifg=" . s:fg_dim . " gui=undercurl"
@@ -156,19 +156,19 @@ execute "highlight @constant          guifg=" . s:fg_dim . " gui=NONE"
 " PLUGIN SPECIFIC HIGHLIGHTS
 " =============================================
 " Telescope
-execute "highlight TelescopeNormal    guifg=" . s:fg . " guibg=" . s:bg"
-execute "highlight TelescopeBorder    guifg=" . s:gray_mid . " guibg=" . s:bg"
+execute "highlight TelescopeNormal    guifg=" . s:fg . " guibg=" . s:bg
+execute "highlight TelescopeBorder    guifg=" . s:gray_mid . " guibg=" . s:bg
 execute "highlight TelescopeSelection guifg=" . s:fg_bright . " guibg=" . s:bg_lighter . " gui=bold"
 
 " NvimTree
-execute "highlight NvimTreeNormal     guifg=" . s:fg . " guibg=" . s:bg_dark"
+execute "highlight NvimTreeNormal     guifg=" . s:fg . " guibg=" . s:bg_dark
 execute "highlight NvimTreeFolderName guifg=" . s:fg . " gui=bold"
 execute "highlight NvimTreeOpenedFolderName guifg=" . s:fg_bright . " gui=bold"
 
 " Git Signs
-execute "highlight GitSignsAdd       guifg=" . s:fg_bright . " guibg=" . s:bg_dark"
-execute "highlight GitSignsChange    guifg=" . s:fg . " guibg=" . s:bg_dark"
-execute "highlight GitSignsDelete    guifg=" . s:gray_mid . " guibg=" . s:bg_dark"
+execute "highlight GitSignsAdd       guifg=" . s:fg_bright . " guibg=" . s:bg_dark
+execute "highlight GitSignsChange    guifg=" . s:fg . " guibg=" . s:bg_dark
+execute "highlight GitSignsDelete    guifg=" . s:gray_mid . " guibg=" . s:bg_dark
 
 " =============================================
 " SPECIAL CASES
@@ -179,18 +179,17 @@ execute "highlight SpecialKey   guifg=" . s:gray_dark . " gui=NONE"
 execute "highlight Directory    guifg=" . s:fg . " gui=bold"
 execute "highlight Title        guifg=" . s:fg_bright . " gui=bold"
 execute "highlight Underlined   guifg=" . s:fg . " gui=underline"
-execute "highlight Conceal      guifg=" . s:gray_mid . " guibg=" . s:bg_dark"
+execute "highlight Conceal      guifg=" . s:gray_mid . " guibg=" . s:bg_dark
 
 " Folding
 execute "highlight Folded       guifg=" . s:gray_light . " guibg=" . s:bg_light . " gui=italic"
-execute "highlight FoldColumn   guifg=" . s:gray_mid . " guibg=" . s:bg_dark"
+execute "highlight FoldColumn   guifg=" . s:gray_mid . " guibg=" . s:bg_dark
 
 " Spelling
 execute "highlight SpellBad     guifg=" . s:fg . " gui=undercurl"
 execute "highlight SpellCap     guifg=" . s:fg . " gui=undercurl"
 execute "highlight SpellLocal   guifg=" . s:fg . " gui=undercurl"
 execute "highlight SpellRare    guifg=" . s:fg . " gui=undercurl"
-
 
 " =============================================
 " NOICE NOTIFICATIONS
@@ -205,7 +204,8 @@ execute "highlight NoiceNotifyWARNIcon   guifg=" . s:gray_light
 execute "highlight NoiceNotifyWARNTitle  guifg=" . s:gray_light . " gui=bold"
 execute "highlight NoiceNotifyWARNBody   guifg=" . s:fg
 
-execute "highlight NoiceNotifyERRORBorder guifg=#8B0000 guibg=" . s:bg_dark
-execute "highlight NoiceNotifyERRORIcon   guifg=#FF5C5C"
+execute "highlight NoiceNotifyERRORBorder guifg=" . "#8B0000" . " guibg=" . s:bg_dark
+execute "highlight NoiceNotifyERRORIcon   guifg=" . "#FF5C5C"
 execute "highlight NoiceNotifyERRORTitle  guifg=" . s:white . " gui=bold"
 execute "highlight NoiceNotifyERRORBody   guifg=" . s:fg
+
