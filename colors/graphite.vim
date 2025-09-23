@@ -190,3 +190,22 @@ execute "highlight SpellBad     guifg=" . s:fg . " gui=undercurl"
 execute "highlight SpellCap     guifg=" . s:fg . " gui=undercurl"
 execute "highlight SpellLocal   guifg=" . s:fg . " gui=undercurl"
 execute "highlight SpellRare    guifg=" . s:fg . " gui=undercurl"
+
+" =============================================
+" NOICE NOTIFICATIONS
+" =============================================
+execute "highlight NoiceNotifyINFOBorder guifg=" . s:gray_dark . " guibg=" . s:bg_dark
+execute "highlight NoiceNotifyINFOIcon   guifg=" . s:fg_bright
+execute "highlight NoiceNotifyINFOTitle  guifg=" . s:fg_bright . " gui=bold"
+execute "highlight NoiceNotifyINFOBody   guifg=" . s:fg
+
+execute "highlight NoiceNotifyWARNBorder guifg=" . s:gray_mid . " guibg=" . s:bg_dark
+execute "highlight NoiceNotifyWARNIcon   guifg=" . s:gray_light
+execute "highlight NoiceNotifyWARNTitle  guifg=" . s:gray_light . " gui=bold"
+execute "highlight NoiceNotifyWARNBody   guifg=" . s:fg
+
+execute "highlight NoiceNotifyERRORBorder guifg=" . "#8B0000" . " guibg=" . s:bg_dark
+execute "highlight NoiceNotifyERRORIcon   guifg=" . "#FF5C5C"
+execute "highlight NoiceNotifyERRORTitle  guifg=" . s:white . " gui=bold"
+execute "highlight NoiceNotifyERRORBody   guifg=" . s:fg
+
